@@ -1,0 +1,79 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #222;
+  padding: 15px 40px;
+  position: relative;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+}
+
+.navMenu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navItem {
+  position: relative;
+}
+
+.navItem a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.navItem a:hover {
+  color: yellow;
+}
+
+.dropdown {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  display: flex;
+  background: #333;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.dropdownDesc {
+  width: 200px;
+  color: white;
+  font-size: 14px;
+  margin-right: 15px;
+}
+
+.dropdownList {
+  list-style: none;
+  padding: 0;
+}
+
+.dropdownList li {
+  padding: 5px 0;
+}
+
+.contactButton {
+  background: yellow;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.underline {
+  height: 3px;
+  width: 100px;
+  background: yellow;
+  position: absolute;
+  bottom: 0;
+  transition: left 0.3s ease-in-out;
+}

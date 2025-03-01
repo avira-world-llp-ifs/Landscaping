@@ -19,3 +19,79 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.contact-btn {
+  -webkit-text-size-adjust: 100%;
+  --sidebar-width: 200px;
+  -webkit-font-smoothing: antialiased;
+  list-style: none;
+  list-style-image: none;
+  letter-spacing: 0.7px;
+  font-optical-sizing: auto;
+  border: 2px solid #ed6631;
+  border-radius: 100px;
+  transition: all 600ms ease !important;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+  line-height: 100%;
+  margin: 0;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: white;
+  color: #000;
+  padding: 16px 24px;
+}
+
+.mail-link {
+  -webkit-text-size-adjust: 100%;
+  --sidebar-width: 200px;
+  list-style: none;
+  padding: 0;
+  font-style: normal;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0;
+  color: #000;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: normal;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+
+/* Animation for the background image sliding in from the left */
+@keyframes slide-bg-animation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Animation for the text fading in */
+@keyframes slide-text-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Apply these animations */
+.slide__bg {
+  animation: slide-bg-animation 1s ease-in-out;
+}
+
+.slide__text {
+  animation: slide-text-animation 1s ease-out 0.5s forwards;
+}
