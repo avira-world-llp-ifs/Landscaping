@@ -2216,6 +2216,7 @@ export default function MultiLineSlideHero() {
                   backgroundImage: `url(${slide.bgImage})`, // Use bgImage directly
                   opacity: isActive ? 1 : 0,
                   transform: isActive ? "translateX(0)" : "translateX(20%)",
+                  borderRadius:"0 0 200px 0"
                 }}
               ></div>
 

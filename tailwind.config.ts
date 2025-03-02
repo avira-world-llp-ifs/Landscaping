@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        serif: ["Source Serif 4", "serif"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

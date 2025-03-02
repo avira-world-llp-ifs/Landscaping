@@ -1,20 +1,19 @@
 "use client";
-import { useState } from "react";
-import Navbar from "@/components/Navbar";
-import SubNavbar from "@/components/SubNavbar";
-import "./globals.css";
 import Footer from "@/components/footer";
+import Header from "@/components/header";
+import "./globals.css";
+import { Inter } from "next/font/google";
 
+const sourceSerif = Inter({ subsets: ["latin"], variable: "--font-source-serif" });
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const [selectedPage, setSelectedPage] = useState("");
 
   return (
-    <html lang="en">
+    <html lang="en" className={sourceSerif.variable}>
       <body>
-        <Navbar />
-        {selectedPage && selectedPage !== "Home" && <SubNavbar selectedPage={selectedPage} />}
+        <Header />
+
         <main >{children}</main>
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

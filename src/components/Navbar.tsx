@@ -964,11 +964,32 @@
 // }
 "use client";
 
-import Link from "next/link";
-import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import {Logo} from "../../public/logo.jpg"
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 
+type SubNavItem = {
+  name: string;
+  href: string;
+};
+
+type SubNavData = {
+  [key: string]: SubNavItem[];
+};
+
+const subNavData: SubNavData = {
+  "/markets": [
+    { name: "Market 1", href: "/markets/market1" },
+    { name: "Market 2", href: "/markets/market2" },
+  ],
+  "/services/consulting": [
+    { name: "Service 1", href: "/services/consulting/service1" },
+    { name: "Service 2", href: "/services/consulting/service2" },
+  ],
+  "/projects": [],
+  "/people": [],
+};
 type NavItem = {
   title: string;
   description: string;
@@ -1010,7 +1031,16 @@ const NAV_ITEMS: NavItem[] = [
   },
 ];
 
-export default function MegaMenuNavbar() {
+export default function MegaMenuNavbar({ setSubNavItems }: { setSubNavItems: (items: SubNavItem[]) => void }) {
+
+  const pathname = usePathname() || "";
+
+  useEffect(() => {
+    const matchedCategory = Object.keys(subNavData).find((key) => pathname.startsWith(key)) || "";
+    setSubNavItems(subNavData[matchedCategory] || []);
+  }, [pathname]);
+
+
   const [hoveredItem, setHoveredItem] = useState<NavItem | null>(null);
   const [activeTab, setActiveTab] = useState<string>("");
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
