@@ -269,6 +269,20 @@
     padding-left: 130px;
     margin-left: 44px;
   }
+  .about_section_blockquote::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -17px;
+    width: 83px;
+    height: 62px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image:url("/quoteYellow.png")
+    
+  }
+ 
+
 
   .about_section_cite {
     text-size-adjust: 100%;
@@ -289,3 +303,14 @@
     left: -37px;
     padding: 79px 76px;
   }
+
+  .about_section_cite::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100%;
+    border: solid 4px #fbc710;
+    border-right: none;
+}

@@ -3,47 +3,37 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS styles
 import { useEffect, useState } from 'react';
 import styles from '../styles/Home_About_Us.module.css'; // Import the CSS module
+import styles4 from '../styles/Home_Review.module.css'; // Import the CSS module
 import styles1 from '../styles/Home_Services.module.css'; // Import the CSS module
 import styles3 from '../styles/Home_Sponsers.module.css'; // Import the CSS module
 import styles2 from '../styles/Home_Statistics.module.css'; // Import the CSS module
-
+import styles5 from '../styles/Home_Projects.module.css'; // Import the CSS module
 
 import 'swiper/css';
 import 'swiper/css/pagination';
 
+import TestimonialCard from '@/components/testimonialCard';
+import { projects } from "../../data/projects";
+import { testimonials } from "../../data/testimonials";
 
 
-const projects = [
-  {
-    title: "Villa In London",
-    description:
-      "Projects for many large domestic and foreign corporations in finance, banking, F&B, education, and communication.",
-    image: "/img/picture/latest-projects/1.jpg",
-    link: "/projects/villa-london",
-    category: "building",
-  },
-  {
-    title: "Spain Working Building",
-    description:
-      "Projects for many large domestic and foreign corporations in finance, banking, F&B, education, and communication.",
-    image: "/img/picture/latest-projects/2.jpg",
-    link: "/projects/spain-building",
-    category: "building",
-  },
-  {
-    title: "House Near Boston",
-    description:
-      "Projects for many large domestic and foreign corporations in finance, banking, F&B, education, and communication.",
-    image: "/img/picture/latest-projects/3.jpg",
-    link: "/projects/house-boston",
-    category: "interior",
-  },
-];
+import Slider from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import ProjectCard from '@/components/ProjectCard';
+import { ChevronRight } from 'lucide-react';
+
+
 
 
 export default function Home() {
   const [filter, setFilter] = useState("all");
+  const [domLoaded, setDomLoaded] = useState(false)
 
+  // Fix for hydration issues with Swiper
+  useEffect(() => {
+    setDomLoaded(true)
+  }, [])
 
   const filteredProjects = filter === "all" ? projects : projects.filter((p) => p.category === filter);
 
@@ -54,6 +44,23 @@ export default function Home() {
       once: true, // Run animation only once
     });
   }, []);
+
+  var settings = {
+    dots: true,
+    infinite: true,
+
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+  };
+  var settings1 = {
+    dots: true,
+    infinite: false,
+
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  };
 
   return (
     // -------------------------------About Us Section Start ----------------------------------------------
@@ -170,231 +177,41 @@ export default function Home() {
       </div>
 
       {/* projects */}
-      {/* <section className="webpage__latest-projects latest-projects">
-        <header className="latest-projects__header container aos-init aos-animate" data-aos="fade">
-          <h2 className="latest-projects__heading heading">Latest projects</h2>
+      <section className="webpage__latest-projects latest-projects">
+        <header className={styles5.projects_header} data-aos="fade">
+          <h2 className={styles5.projects_header_heading}>Latest projects</h2>
 
-          <div className="latest-projects__filter filter">
-            <button className="filter__item filter__item--active __js_latest-projects-filter-item" type="button" data-filter="*">all</button>
-            <button className="filter__item __js_latest-projects-filter-item" type="button" data-filter=".__js_building">Building</button>
-            <button className="filter__item __js_latest-projects-filter-item" type="button" data-filter=".__js_interior">Interior</button>
+          <div className={styles5.project_filters}>
+            <button className={`${styles5.filter_item}`} type="button" data-filter="*">all</button>
+            <button className={styles5.filter_item} type="button" data-filter=".__js_building">Building</button>
+            <button className={styles5.filter_item} type="button" data-filter=".__js_interior">Interior</button>
           </div>
-          <a className="latest-projects__more more" href="projects-grid.html">View all projects
+          <a className={styles5.projects_more} href="projects-grid.html">View all projects
             <svg width="20" height="20">
-              <use ></use>
+              <ChevronRight></ChevronRight>
             </svg>
           </a>
         </header>
-        <div className="latest-projects__inner container aos-init aos-animate" data-aos="fade">
-          <div className="latest-projects__carousel swiper-container __js_latest-projects-carousel swiper-container-initialized swiper-container-horizontal">
-            <div className="swiper-wrapper" id="swiper-wrapper-9e436d697b72e3f8" aria-live="polite" style={{ transform: "translate3d(0px, 0px, 0px);" }}>
-              <a className="card swiper-slide __js_building swiper-slide-active" href="projects-detail.html" role="group" aria-label="1 / 8" style={{ width: "330px", marginRight: "30px" }}>
-                <div className="card__image">
-                  <img src="img/picture/latest-projects/1.jpg" width="430" height="573" alt="" />
-                </div>
-                <div className="card__content">
-                  <h3 className="card__heading">Villa
-                    <br />In
-                    <br />London
-                  </h3>
-                  <div className="card__text">Projects for many large domestic and foreign corporations, enterprises in many elds such as nance, banking, F&amp;B, education, communication.</div>
-                  <div className="card__bottom">
-                    <span className="card__link">See project
-                      <svg width="20" height="20">
-                        <use></use>
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </a>
-              <a className="card swiper-slide __js_building swiper-slide-next" href="projects-detail.html" role="group" aria-label="2 / 8" style={{ width: "330px", marginRight: "30px" }}>
-                <div className="card__image">
-                  <img src="img/picture/latest-projects/2.jpg" width="430" height="573" alt="" />
-                </div>
-                <div className="card__content">
-                  <h3 className="card__heading">Spain
-                    <br />Working
-                    <br />Building
-                  </h3>
-                  <div className="card__text">Projects for many large domestic and foreign corporations, enterprises in many elds such as nance, banking, F&amp;B, education, communication.</div>
-                  <div className="card__bottom">
-                    <span className="card__link">See project
-                      <svg width="20" height="20">
-                        <use></use>
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </a>
-              <a className="card swiper-slide __js_interior" href="projects-detail.html" role="group" aria-label="3 / 8" style={{ width: "330px", marginRight: "30px" }}>
-                <div className="card__image">
-                  <img src="img/picture/latest-projects/3.jpg" width="430" height="573" alt="" />
-                </div>
-                <div className="card__content">
-                  <h3 className="card__heading">House
-                    <br />Near
-                    <br />Boston
-                  </h3>
-                  <div className="card__text">Projects for many large domestic and foreign corporations, enterprises in many elds such as nance, banking, F&amp;B, education, communication.</div>
-                  <div className="card__bottom">
-                    <span className="card__link">See project
-                      <svg width="20" height="20">
-                        <use ></use>
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </a>
-              <a className="card swiper-slide __js_building" href="projects-detail.html" role="group" aria-label="4 / 8" style={{ width: "330px", marginRight: "30px" }}>
-                <div className="card__image">
-                  <img src="img/picture/latest-projects/4.jpg" width="430" height="573" alt="" />
-                </div>
-                <div className="card__content">
-                  <h3 className="card__heading">Villa
-                    <br />On The
-                    <br />River
-                  </h3>
-                  <div className="card__text">Projects for many large domestic and foreign corporations, enterprises in many elds such as nance, banking, F&amp;B, education, communication.</div>
-                  <div className="card__bottom">
-                    <span className="card__link">See project
-                      <svg width="20" height="20">
-                        <use ></use>
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </a>
-              <a className="card swiper-slide __js_building" href="projects-detail.html" role="group" aria-label="5 / 8" style={{ width: "330px", marginRight: "30px" }}>
-                <div className="card__image">
-                  <img src="img/picture/latest-projects/1.jpg" width="430" height="573" alt="" />
-                </div>
-                <div className="card__content">
-                  <h3 className="card__heading">Villa
-                    <br />In
-                    <br />London
-                  </h3>
-                  <div className="card__text">Projects for many large domestic and foreign corporations, enterprises in many elds such as nance, banking, F&amp;B, education, communication.</div>
-                  <div className="card__bottom">
-                    <span className="card__link">See project
-                      <svg width="20" height="20">
-                        <use ></use>
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </a>
-              <a className="card swiper-slide __js_building" href="projects-detail.html" role="group" aria-label="6 / 8" style={{ width: "330px", marginRight: "30px" }}>
-                <div className="card__image">
-                  <img src="img/picture/latest-projects/2.jpg" width="430" height="573" alt="" />
-                </div>
-                <div className="card__content">
-                  <h3 className="card__heading">Spain
-                    <br />Working
-                    <br />Building
-                  </h3>
-                  <div className="card__text">Projects for many large domestic and foreign corporations, enterprises in many elds such as nance, banking, F&amp;B, education, communication.</div>
-                  <div className="card__bottom">
-                    <span className="card__link">See project
-                      <svg width="20" height="20">
-                        <use ></use>
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </a>
-              <a className="card swiper-slide __js_interior" href="projects-detail.html" role="group" aria-label="7 / 8" style={{ width: "330px", marginRight: "30px" }}>
-                <div className="card__image">
-                  <img src="img/picture/latest-projects/3.jpg" width="430" height="573" alt="" />
-                </div>
-                <div className="card__content">
-                  <h3 className="card__heading">House
-                    <br />Near
-                    <br />Boston
-                  </h3>
-                  <div className="card__text">Projects for many large domestic and foreign corporations, enterprises in many elds such as nance, banking, F&amp;B, education, communication.</div>
-                  <div className="card__bottom">
-                    <span className="card__link">See project
-                      <svg width="20" height="20">
-                        <use ></use>
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </a>
-              <a className="card swiper-slide __js_building" href="projects-detail.html" role="group" aria-label="8 / 8" style={{ width: "330px", marginRight: "30px" }}>
-                <div className="card__image">
-                  <img src="img/picture/latest-projects/4.jpg" width="430" height="573" alt="" />
-                </div>
-                <div className="card__content">
-                  <h3 className="card__heading">Villa
-                    <br />On The
-                    <br />River
-                  </h3>
-                  <div className="card__text">Projects for many large domestic and foreign corporations, enterprises in many elds such as nance, banking, F&amp;B, education, communication.</div>
-                  <div className="card__bottom">
-                    <span className="card__link">See project
-                      <svg width="20" height="20">
-                        <use ></use>
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span className="swiper-pagination-bullet swiper-pagination-bullet-active" role="button" aria-label="Go to slide 1"></span><span className="swiper-pagination-bullet" role="button" aria-label="Go to slide 2"></span><span className="swiper-pagination-bullet" role="button" aria-label="Go to slide 3"></span><span className="swiper-pagination-bullet" role="button" aria-label="Go to slide 4"></span><span className="swiper-pagination-bullet" role="button" aria-label="Go to slide 5"></span></div>
-            <span className="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
-        </div>
-      </section> */}
-      {/* <section className="webpage__latest-projects latest-projects py-12 bg-gray-100">
-      <header className="latest-projects__header container mx-auto text-center" data-aos="fade-up">
-        <h2 className="text-3xl font-semibold text-gray-800 mb-6">Latest Projects</h2>
-        <div className="latest-projects__filter filter flex justify-center space-x-4">
-          <button className="filter__item filter__item--active text-orange-500 border-b-2 border-orange-500">
-            All
-          </button>
-          <button className="filter__item text-gray-600 hover:text-orange-500">Building</button>
-          <button className="filter__item text-gray-600 hover:text-orange-500">Interior</button>
-        </div>
-      </header>
+        <div className={styles5.projectInnerContainer} data-aos="fade">
+          <div className={styles5.projectSliderContainer}>
 
-      <div className="latest-projects__inner container mx-auto mt-8" data-aos="fade-up">
-        <Swiper
-          modules={[Pagination, Navigation]}
-          slidesPerView={1}
-          spaceBetween={30}
-          pagination={{ clickable: true }}
-          navigation
-          breakpoints={{
-            640: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
-        >
-          {projects.map((project, index) => (
-            <SwiperSlide key={index}>
-              <Link href={project.link} className="block shadow-lg rounded-lg overflow-hidden bg-white">
-                <div className="relative">
-                  <Image
-                    src={project.image}
-                    width={430}
-                    height={573}
-                    alt={project.title}
-                    className="w-full object-cover"
+              <Slider {...settings1}>
+                {filteredProjects.map((project, index) => (
+                  
+                  <ProjectCard key={index}
+
+                    title={project.title}
+                    imageUrl={project.link}
+                    description={project.description}
+
                   />
-                </div>
-                <div className="p-5">
-                  <h3 className="text-lg font-semibold text-gray-800">{project.title}</h3>
-                  <p className="text-sm text-gray-600">{project.description}</p>
-                  <span className="text-orange-500 font-medium mt-2 block">See Project →</span>
-                </div>
-              </Link>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-    </section> */}
 
-      {/* sponsors */}
+                ))}
+              </Slider>
+                 
+          </div>
+        </div>
+      </section>
 
       <section className={styles3.sponsors_section}>
         <div className={styles3.sponsors_inner_container}>
@@ -414,6 +231,38 @@ export default function Home() {
           </ul>
         </div>
       </section>
+
+      {/* founder */}
+
+
+      <div className={styles4.review_swiper_container} data-aos="fade">
+
+        <div className={styles4.review_outer_container}>
+          <div className={styles4.review_inner_container}>
+            {/* <h2 className="text-3xl font-bold text-center mb-16">What Our Clients Say</h2> */}
+
+
+            <Slider {...settings}>
+              {testimonials.map((testimonial, index) => (
+
+                <TestimonialCard key={index}
+                  name={testimonial.name}
+                  role={testimonial.role}
+                  company={testimonial.company}
+                  companyColor={testimonial.companyColor}
+                  description={testimonial.description}
+                  imageSrc={testimonial.imageSrc}
+                />
+
+              ))}
+            </Slider>
+          </div>
+        </div>
+      </div>
+
+
+
+
     </div>
   );
 }

@@ -97,3 +97,64 @@ body {
 }
 
 
+
+
+/* Container Styles */
+.swiper-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+/* Review Card Styling */
+.review-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+}
+
+.review-card__image img {
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.review-card__name {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.review-card__post {
+  color: #888;
+  font-size: 1em;
+  margin-bottom: 15px;
+}
+
+.review-card__text {
+  color: #555;
+  font-size: 1em;
+}
+
+/* Navigation Arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #007aff;
+  font-size: 24px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+/* Pagination */
+.swiper-pagination {
+  bottom: 10px;
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  background-color: #007aff;
+}

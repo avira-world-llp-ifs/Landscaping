@@ -1,0 +1,112 @@
+.reviews_carousel_item {
+    text-size-adjust: 100%;
+    --swiper-theme-color: #007aff;
+    --swiper-navigation-size: 44px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-font-smoothing: antialiased;
+    font-family: "Poppins", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 1.625;
+    color: #787878;
+    font-weight: 400;
+    -webkit-locale: auto;
+    white-space: normal;
+    flex-shrink: 0;
+    height: 100%;
+    transition-property: transform;
+    position: relative;
+    box-sizing: border-box;
+    padding: 24px 32px;
+    border: solid 4px #fbc710;
+    margin-top: 58px;
+    width: 450px;
+    margin-right: 30px;
+    margin-left: 19px;
+}
+
+.review-card {
+    position: relative;
+    box-sizing: border-box;
+    padding: 32px 32px;
+    border: solid 4px #fbc710;
+}
+
+
+.reviews_carousel_item::before {
+    content: "";
+    position: absolute;
+    top: 50px;
+    right: 40px;
+    width: 42px;
+    height: 62px;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-image: url("/quoteYellow.png")
+}
+
+
+.review_card_image {
+    text-size-adjust: 100%; /* Ensures text size is adjusted correctly on mobile devices */
+    --swiper-theme-color: #007aff; /* Custom property, probably for a swiper slider */
+    --swiper-navigation-size: 44px; /* Custom property for swiper navigation */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Removes the tap highlight color on mobile devices */
+    -webkit-font-smoothing: antialiased; /* Smooths the fonts in WebKit browsers */
+    font-family: "Poppins", "Arial", sans-serif; /* Font styling for the text */
+    font-size: 16px; /* Default font size */
+    line-height: 1.625; /* Line height for text */
+    color: #787878; /* Text color */
+    font-weight: 400; /* Font weight (normal) */
+    -webkit-locale: auto; /* Automatically detects the locale in WebKit browsers */
+    white-space: normal; /* Allows text to wrap normally */
+    box-sizing: inherit; /* Inherits box-sizing from the parent element */
+    width: 112px; /* Sets the width of the image */
+    height: 112px; /* Sets the height of the image */
+    margin-top: -84px; /* Negative margin to pull the image upwards */
+    margin-bottom: 48px; /* Adds space below the image */
+    border-radius: 50%; /* Makes the image circular */
+    overflow: hidden; /* Ensures that any overflowed content (like part of the image) is hidden */
+}
+
+
+
+.review_card_name {
+    text-size-adjust: 100%; /* Ensures proper text size adjustment on mobile */
+    --swiper-theme-color: #007aff; /* Custom property, likely for Swiper navigation */
+    --swiper-navigation-size: 44px; /* Custom property for Swiper navigation size */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Removes the tap highlight color on mobile devices */
+    -webkit-font-smoothing: antialiased; /* Smooths the font in WebKit browsers (like Chrome and Safari) */
+    -webkit-locale: auto; /* Automatically detects the locale in WebKit browsers */
+    white-space: normal; /* Allows text to wrap normally */
+    box-sizing: inherit; /* Inherits the box-sizing value from the parent element */
+    margin-bottom: 20px; /* Adds space below the title */
+    font-size: 25px; /* Sets the font size for the title */
+    line-height: 1.2; /* Controls the spacing between lines of text */
+    color: #000000; /* Sets the text color to black */
+    font-family: "Gilroy", "Arial", sans-serif; /* Defines the font family for the title */
+    font-weight: 700; /* Makes the font bold */
+}
+
+.review_card_post{
+    margin-bottom: 32px;
+    font-size: 16px;
+    line-height: 1.17;
+    color: #000000;
+}
+
+
+
+.review_card_text {
+    text-size-adjust: 100%; /* Ensures proper text size adjustment on mobile */
+    --swiper-theme-color: #007aff; /* Custom property, likely for Swiper navigation */
+    --swiper-navigation-size: 44px; /* Custom property for Swiper navigation size */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Removes tap highlight color on mobile */
+    -webkit-font-smoothing: antialiased; /* Ensures smoother font rendering in WebKit browsers */
+    font-family: "Poppins", "Arial", sans-serif; /* Specifies the font family for the text */
+    font-size: 16px; /* Sets the font size for the text */
+    line-height: 1.625; /* Controls the spacing between lines of text for better readability */
+    color: #787878; /* Sets the text color to a grayish color */
+    font-weight: 400; /* Normal font weight */
+    -webkit-locale: auto; /* Detects the locale automatically for WebKit browsers */
+    white-space: normal; /* Allows the text to wrap normally */
+    box-sizing: inherit; /* Inherits box-sizing property from parent element */
+}
