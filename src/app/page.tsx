@@ -3,11 +3,11 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS styles
 import { useEffect, useState } from 'react';
 import styles from '../styles/Home_About_Us.module.css'; // Import the CSS module
+import styles5 from '../styles/Home_Projects.module.css'; // Import the CSS module
 import styles4 from '../styles/Home_Review.module.css'; // Import the CSS module
 import styles1 from '../styles/Home_Services.module.css'; // Import the CSS module
 import styles3 from '../styles/Home_Sponsers.module.css'; // Import the CSS module
 import styles2 from '../styles/Home_Statistics.module.css'; // Import the CSS module
-import styles5 from '../styles/Home_Projects.module.css'; // Import the CSS module
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -17,11 +17,11 @@ import { projects } from "../../data/projects";
 import { testimonials } from "../../data/testimonials";
 
 
+import ProjectCard from '@/components/ProjectCard';
+import { ChevronRight } from 'lucide-react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import ProjectCard from '@/components/ProjectCard';
-import { ChevronRight } from 'lucide-react';
 
 
 
@@ -35,8 +35,11 @@ export default function Home() {
     setDomLoaded(true)
   }, [])
 
-  const filteredProjects = filter === "all" ? projects : projects.filter((p) => p.category === filter);
-
+  const filteredProjects = filter === 'all' ? projects : projects.filter((p) => p.category === filter);
+console.log(filteredProjects)
+  const handleFilterChange = (category: string) => {
+    setFilter(category);
+  };
   useEffect(() => {
     AOS.init({
       duration: 1000, // Duration of the animation
@@ -64,7 +67,7 @@ export default function Home() {
 
   return (
     // -------------------------------About Us Section Start ----------------------------------------------
-    <div className='mt-60'>
+    <div className='mt-60'style={{marginLeft:'20px'}}>
       <div className={styles.pageContainer}>
         <section className={styles.webpage_about_section}>
           <div className="about-section__inner container">
@@ -181,7 +184,7 @@ export default function Home() {
         <header className={styles5.projects_header} data-aos="fade">
           <h2 className={styles5.projects_header_heading}>Latest projects</h2>
 
-          <div className={styles5.project_filters}>
+          {/* <div className={styles5.project_filters}>
             <button className={`${styles5.filter_item}`} type="button" data-filter="*">all</button>
             <button className={styles5.filter_item} type="button" data-filter=".__js_building">Building</button>
             <button className={styles5.filter_item} type="button" data-filter=".__js_interior">Interior</button>
@@ -190,29 +193,58 @@ export default function Home() {
             <svg width="20" height="20">
               <ChevronRight></ChevronRight>
             </svg>
-          </a>
-        </header>
+          </a> */}
+          <div className={styles5.project_filters}>
+          <button 
+            className={`${styles5.filter_item} ${filter === 'all' ? styles5.active_filter : ''}`} 
+            type="button" 
+            onClick={() => handleFilterChange('all')}
+          >
+            all
+          </button>
+          <button 
+            className={`${styles5.filter_item} ${filter === 'building' ? styles5.active_filter : ''}`} 
+            type="button" 
+            onClick={() => handleFilterChange('building')}
+          >
+            Building
+          </button>
+          <button 
+            className={`${styles5.filter_item} ${filter === 'interior' ? styles5.active_filter : ''}`} 
+            type="button" 
+            onClick={() => handleFilterChange('interior')}
+          >
+            Interior
+          </button>
+        </div>
+
+        <a className={styles5.projects_more} href="projects-grid.html">
+          View all projects
+          <ChevronRight />
+        </a>
+      </header>
         <div className={styles5.projectInnerContainer} data-aos="fade">
           <div className={styles5.projectSliderContainer}>
 
-              <Slider {...settings1}>
-                {filteredProjects.map((project, index) => (
-                  
-                  <ProjectCard key={index}
+            <Slider {...settings1}>
+              {filteredProjects.map((project, index) => (
 
-                    title={project.title}
-                    imageUrl={project.link}
-                    description={project.description}
+                <ProjectCard key={index}
 
-                  />
+                  title={project.title}
+                  imageUrl={project.link}
+                  description={project.description}
 
-                ))}
-              </Slider>
-                 
+                />
+
+              ))}
+            </Slider>
+
           </div>
         </div>
       </section>
 
+      {/* sponsers */}
       <section className={styles3.sponsors_section}>
         <div className={styles3.sponsors_inner_container}>
           <ul className={styles3.sponsors_list}>
@@ -232,9 +264,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* founder */}
 
-
+      {/* Review */}
       <div className={styles4.review_swiper_container} data-aos="fade">
 
         <div className={styles4.review_outer_container}>

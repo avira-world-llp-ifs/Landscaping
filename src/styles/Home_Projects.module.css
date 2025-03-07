@@ -129,9 +129,9 @@
     color: #fbc710
 }
 
-.filter_item:active {
+/* .filter_item:active {
     background-color: pink;
-}
+} */
 
 
 
@@ -169,6 +169,7 @@
     transition-duration: 1s;
     transition-timing-function: ease;
     opacity: 1;
+    height: 425px;
     transform: translateZ(0);
 }
 
@@ -176,6 +177,7 @@
 /* CSS Module for Slider Inner Container */
 
 .projectSliderContainer {
+    height: 100%;
     text-size-adjust: 100%;
     --swiper-theme-color: #007aff;
     --swiper-navigation-size: 44px;
@@ -199,3 +201,9 @@
     z-index: 1;
 }
 
+
+
+.active_filter {
+    color: #fbc710;
+      /* Optional: Change text color for better visibility */
+  }
