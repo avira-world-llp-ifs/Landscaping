@@ -2284,9 +2284,10 @@ export default function MultiLineSlideHero() {
           </span>
           <div className="w-32 h-1 bg-white rounded-full">
             <div
-              className="h-full bg-orange-500 rounded-full transition-all duration-300 ease-in-out"
+              className="h-full  rounded-full transition-all duration-300 ease-in-out"
               style={{
                 width: `${((currentSlide + 1) / slideCount) * 100}%`,
+                backgroundColor:'#003087'
               }}
             ></div>
           </div>
@@ -2301,7 +2302,8 @@ export default function MultiLineSlideHero() {
             onClick={() =>
               setCurrentSlide((prev) => (prev - 1 + slideCount) % slideCount)
             }
-            className="text-orange-500 text-2xl w-12 h-12 rounded-full border border-gray-400 flex items-center justify-center bg-white shadow-lg hover:shadow-xl hover:bg-orange-500 hover:text-white transition-all duration-300 ease-in-out"
+            style={{color:'#003087'}}
+            className=" text-2xl w-12 h-12 rounded-full border border-gray-400 flex items-center justify-center bg-white shadow-lg hover:shadow-xl hover:bg-blue-600 hover:text-white transition-all duration-300 ease-in-out"
           >
             &#60;
           </button>
@@ -2309,7 +2311,9 @@ export default function MultiLineSlideHero() {
             onClick={() =>
               setCurrentSlide((prev) => (prev + 1) % slideCount)
             }
-            className="text-orange-500 text-2xl w-12 h-12 rounded-full border border-gray-400 flex items-center justify-center bg-white shadow-lg hover:shadow-xl hover:bg-orange-500 hover:text-white transition-all duration-300 ease-in-out"
+            style={{color:'#003087'}}
+            className="text-2xl w-12 h-12 rounded-full border border-gray-400 flex items-center justify-center bg-white shadow-lg hover:shadow-xl hover:text-white transition-all duration-300 ease-in-out"
+
           >
             &#62;
           </button>

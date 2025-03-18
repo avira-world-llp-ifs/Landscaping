@@ -159,19 +159,18 @@
     white-space: normal;
     box-sizing: inherit;
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    /* margin-right: auto; */
-    margin-left: 25px;
+    
     /* justify-content: center; */
-    max-width: 1830px;
+    max-width: 1130px;
     transition-property: opacity, transform;
     transition-duration: 1s;
     transition-timing-function: ease;
     opacity: 1;
     height: 425px;
     transform: translateZ(0);
-}
+    display: flex;
+    align-items: center;
+  }
 
 
 /* CSS Module for Slider Inner Container */
@@ -198,6 +197,7 @@
     overflow: hidden;
     list-style: none;
     padding: 0;
+    margin: 0;
     z-index: 1;
 }
 

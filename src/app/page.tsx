@@ -36,7 +36,7 @@ export default function Home() {
   }, [])
 
   const filteredProjects = filter === 'all' ? projects : projects.filter((p) => p.category === filter);
-console.log(filteredProjects)
+  console.log(filteredProjects)
   const handleFilterChange = (category: string) => {
     setFilter(category);
   };
@@ -57,17 +57,21 @@ console.log(filteredProjects)
     slidesToScroll: 2,
   };
   var settings1 = {
-    dots: true,
-    infinite: false,
 
-    speed: 500,
+
+    autoplay: true,             // Enable auto-play
+    autoplaySpeed: 2000,        // Auto-play speed (in milliseconds)
+    dots: true,                 // Show navigation dots
+    infinite: true,             // Infinite looping
+    speed: 500,                 // Transition speed (in milliseconds)
+    
     slidesToShow: 3,
     slidesToScroll: 1,
   };
 
   return (
     // -------------------------------About Us Section Start ----------------------------------------------
-    <div className='mt-60'style={{marginLeft:'20px'}}>
+    <div className='mt-60' style={{ marginLeft: '20px' }}>
       <div className={styles.pageContainer}>
         <section className={styles.webpage_about_section}>
           <div className="about-section__inner container">
@@ -195,51 +199,54 @@ console.log(filteredProjects)
             </svg>
           </a> */}
           <div className={styles5.project_filters}>
-          <button 
-            className={`${styles5.filter_item} ${filter === 'all' ? styles5.active_filter : ''}`} 
-            type="button" 
-            onClick={() => handleFilterChange('all')}
-          >
-            all
-          </button>
-          <button 
-            className={`${styles5.filter_item} ${filter === 'building' ? styles5.active_filter : ''}`} 
-            type="button" 
-            onClick={() => handleFilterChange('building')}
-          >
-            Building
-          </button>
-          <button 
-            className={`${styles5.filter_item} ${filter === 'interior' ? styles5.active_filter : ''}`} 
-            type="button" 
-            onClick={() => handleFilterChange('interior')}
-          >
-            Interior
-          </button>
-        </div>
+            <button
+              className={`${styles5.filter_item} ${filter === 'all' ? styles5.active_filter : ''}`}
+              type="button"
+              onClick={() => handleFilterChange('all')}
+            >
+              all
+            </button>
+            <button
+              className={`${styles5.filter_item} ${filter === 'building' ? styles5.active_filter : ''}`}
+              type="button"
+              onClick={() => handleFilterChange('building')}
+            >
+              Building
+            </button>
+            <button
+              className={`${styles5.filter_item} ${filter === 'interior' ? styles5.active_filter : ''}`}
+              type="button"
+              onClick={() => handleFilterChange('interior')}
+            >
+              Interior
+            </button>
+          </div>
 
-        <a className={styles5.projects_more} href="projects-grid.html">
-          View all projects
-          <ChevronRight />
-        </a>
-      </header>
-        <div className={styles5.projectInnerContainer} data-aos="fade">
-          <div className={styles5.projectSliderContainer}>
+          <a className={styles5.projects_more} href="projects-grid.html">
+            View all projects
+            <ChevronRight />
+          </a>
+        </header>
+        <div  style={{ display: 'flex', justifyContent: 'center' }}>
 
-            <Slider {...settings1}>
-              {filteredProjects.map((project, index) => (
+          <div className={styles5.projectInnerContainer} data-aos="fade">
+            <div className={styles5.projectSliderContainer}>
 
-                <ProjectCard key={index}
+              <Slider {...settings1}>
+                {filteredProjects.map((project, index) => (
 
-                  title={project.title}
-                  imageUrl={project.link}
-                  description={project.description}
+                  <ProjectCard key={index}
 
-                />
+                    title={project.title}
+                    imageUrl={project.link}
+                    description={project.description}
 
-              ))}
-            </Slider>
+                  />
 
+                ))}
+              </Slider>
+
+            </div>
           </div>
         </div>
       </section>

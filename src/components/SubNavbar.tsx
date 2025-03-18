@@ -51,7 +51,7 @@ export default function SubNavbar({ items }: { items: SubNavItem[] }) {
           <Link
             key={item.href}
             href={item.href}
-            className="px-4 py-2 hover:bg-orange-500 hover:text-white rounded-md transition-all"
+            className="px-4 py-2 hover:#003087 hover:text-white rounded-md transition-all"
             style={{fontWeight:"bold", fontSize:"20px"} }
           >
             {item.name}
