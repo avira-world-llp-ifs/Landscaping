@@ -1,0 +1,621 @@
+.servicesDetailsPage {
+  --bs-blue: #0d6efd;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+  --bs-red: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+  --bs-green: #198754;
+  --bs-teal: #20c997;
+  --bs-cyan: #0dcaf0;
+  --bs-white: #fff;
+  --bs-gray: #6c757d;
+  --bs-gray-dark: #343a40;
+  --bs-primary: #0d6efd;
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #212529;
+  --bs-font-sans-serif:
+    system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --thm-font: "Open Sans", sans-serif;
+  --thm-font-2: "Roboto", sans-serif;
+  --thm-base: #ff5e14;
+  --thm-base-rgb: 255, 94, 20;
+  --thm-black: #001659;
+  --thm-black-rgb: 0, 22, 89;
+  --thm-gray: #838691;
+  --thm-gray-rgb: 131, 134, 145;
+  --thm-primary: #00235a;
+  --thm-primary-rgb: 0, 35, 90;
+  --swiper-theme-color: #007aff;
+  --swiper-navigation-size: 44px;
+
+  position: relative;
+  display: block;
+  background: #ffffff;
+  padding: 120px 0px 120px;
+  font-family: var(--thm-font);
+  color: var(--thm-gray);
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+/* Main Content Styles */
+.servicesDetailsContent {
+  position: relative;
+  display: block;
+  margin-right: 30px;
+}
+
+.servicesDetailsImg1 {
+  position: relative;
+  display: block;
+  margin-bottom: 44px;
+}
+
+.servicesDetailsImg1 img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.servicesDetailsTextBox1 {
+  position: relative;
+  display: block;
+  margin-bottom: 40px;
+}
+
+.servicesDetailsTextBox1 .title h2 {
+  font-size: 36px;
+  line-height: 46px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: var(--thm-black);
+  font-family: var(--thm-font-2);
+}
+
+.servicesDetailsTextBox1 .text1 {
+  margin-bottom: 27px;
+}
+
+.servicesDetailsTextBox2 {
+  position: relative;
+  display: block;
+  background-color: #f4f5f8;
+  border-radius: 10px;
+  padding: 60px;
+  margin-bottom: 44px;
+}
+
+.servicesDetailsTextBox2Img {
+  position: relative;
+  display: block;
+}
+
+.servicesDetailsTextBox2Img img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.servicesDetailsTextBox2Content {
+  position: relative;
+  display: block;
+  margin-left: 30px;
+}
+
+.servicesDetailsTextBox2Content .title h2 {
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: var(--thm-black);
+  font-family: var(--thm-font-2);
+}
+
+.servicesDetailsTextBox2Content .text p {
+  margin-bottom: 31px;
+}
+
+.servicesDetailsTextBox2Content ul {
+  position: relative;
+  display: block;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.servicesDetailsTextBox2Content ul li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 0px;
+  margin-bottom: 10px;
+}
+
+.servicesDetailsTextBox2Content ul li .icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background-color: var(--thm-base);
+  border-radius: 50%;
+  margin-right: 15px;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.servicesDetailsTextBox3 {
+  position: relative;
+  display: block;
+  margin-bottom: 44px;
+}
+
+.servicesDetailsTextBox3 p {
+  margin-bottom: 33px;
+}
+
+.servicesDetailsTextBox3 ul {
+  position: relative;
+  display: block;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.servicesDetailsTextBox3 ul li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 0px;
+  margin-bottom: 10px;
+}
+
+.servicesDetailsTextBox3 ul li .icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background-color: var(--thm-base);
+  border-radius: 50%;
+  margin-right: 15px;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+/* Tab Styles */
+.servicesDetailsTabBox {
+  position: relative;
+  display: block;
+}
+
+.servicesDetailsTab {
+  position: relative;
+  display: block;
+}
+
+.servicesDetailsTabButton {
+  position: relative;
+  display: block;
+  border-bottom: 1px solid #e7e7e8;
+  margin-bottom: 30px;
+}
+
+.servicesDetailsTabButton ul {
+  position: relative;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.servicesDetailsTabButton ul li {
+  position: relative;
+  display: block;
+  margin-right: 40px;
+  margin-bottom: 0;
+}
+
+.servicesDetailsTabButton ul li:last-child {
+  margin-right: 0;
+}
+
+.servicesDetailsTabButton ul li h4 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  padding-bottom: 29px;
+  cursor: pointer;
+  position: relative;
+  transition: all 200ms linear;
+  transition-delay: 0.1s;
+  color: var(--thm-gray);
+  font-family: var(--thm-font-2);
+}
+
+.servicesDetailsTabButton ul li.activeBtn h4 {
+  color: var(--thm-base);
+}
+
+.servicesDetailsTabButton ul li h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 3px;
+  background-color: var(--thm-base);
+  transition: all 200ms linear;
+  transition-delay: 0.1s;
+}
+
+.servicesDetailsTabButton ul li.activeBtn h4::before {
+  width: 100%;
+}
+
+.tabsContent {
+  position: relative;
+  display: block;
+}
+
+.tab {
+  display: none;
+}
+
+.tab.activeTab {
+  display: block;
+}
+
+.servicesDetailsTabContentItem {
+  position: relative;
+  display: block;
+}
+
+.qualityMaterialsTabBox {
+  position: relative;
+  display: block;
+}
+
+.qualityMaterialsTabBoxImg {
+  position: relative;
+  display: block;
+}
+
+.qualityMaterialsTabBoxImg img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.qualityMaterialsTabBoxContent {
+  position: relative;
+  display: block;
+  margin-left: 30px;
+}
+
+.qualityMaterialsTabBoxContent .text1 {
+  margin-bottom: 27px;
+}
+
+.interiorDesignTabBox,
+.personalCareTabBox {
+  position: relative;
+  display: block;
+}
+
+.interiorDesignTabBoxImg,
+.personalCareTabBoxImg {
+  position: relative;
+  display: block;
+}
+
+.interiorDesignTabBoxImg img,
+.personalCareTabBoxImg img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.interiorDesignTabBoxContent,
+.personalCareTabBoxContent {
+  position: relative;
+  display: block;
+  margin-left: 30px;
+}
+
+.interiorDesignTabBoxContent .text1,
+.personalCareTabBoxContent .text1 {
+  margin-bottom: 27px;
+}
+
+.superSupportTabBox {
+  position: relative;
+  display: block;
+}
+
+.superSupportTabBoxForm {
+  position: relative;
+  display: block;
+}
+
+.commentFormInputBox {
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.commentFormInputBox input[type="text"],
+.commentFormInputBox input[type="email"] {
+  height: 60px;
+  width: 100%;
+  border: none;
+  background-color: #f4f5f8;
+  padding: 0 30px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #707876;
+  font-weight: 400;
+  outline: none;
+}
+
+.commentFormInputBox textarea {
+  height: 160px;
+  width: 100%;
+  border: none;
+  background-color: #f4f5f8;
+  padding: 20px 30px 30px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #707876;
+  font-weight: 400;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+.thmBtn {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  outline: none;
+  background-color: var(--thm-base);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 17px 50px 17px;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.5s linear;
+  z-index: 1;
+  border: none;
+  cursor: pointer;
+  font-family: var(--thm-font-2);
+}
+
+.thmBtn:hover {
+  color: #ffffff;
+  background-color: var(--thm-black);
+}
+
+/* Sidebar Styles */
+.servicesDetailsSidebar {
+  position: relative;
+  display: block;
+}
+
+.servicesDetailsSidebarSingle {
+  position: relative;
+  display: block;
+  background-color: #f4f5f8;
+  border-radius: 10px;
+  padding: 45px 30px 50px;
+  margin-bottom: 30px;
+}
+
+.servicesDetailsSidebarSingle .title {
+  margin-bottom: 23px;
+}
+
+.servicesDetailsSidebarSingle .title h2 {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 700;
+  color: var(--thm-black);
+  font-family: var(--thm-font-2);
+}
+
+.servicesDetailsSearchForm {
+  position: relative;
+  display: block;
+}
+
+.servicesDetailsSearchForm input[type="search"] {
+  height: 65px;
+  width: 100%;
+  border: none;
+  background-color: #ffffff;
+  padding: 0 50px 0 30px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #707876;
+  font-weight: 400;
+  outline: none;
+  transition: all 500ms ease;
+}
+
+.servicesDetailsSearchForm button {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  bottom: 0;
+  background-color: transparent;
+  border: none;
+  color: var(--thm-gray);
+  font-size: 14px;
+  outline: none;
+  padding: 0;
+  transition: all 500ms ease;
+}
+
+.servicesDetailsCategoryList {
+  position: relative;
+  display: block;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.servicesDetailsCategoryList li {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.servicesDetailsCategoryList li:last-child {
+  margin-bottom: 0;
+}
+
+.servicesDetailsCategoryList li a {
+  position: relative;
+  display: block;
+  background-color: #ffffff;
+  padding: 11px 30px 11px;
+  border-radius: 5px;
+  color: var(--thm-gray);
+  font-size: 16px;
+  font-weight: 400;
+  transition: all 500ms ease;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+}
+
+.servicesDetailsCategoryList li a.active,
+.servicesDetailsCategoryList li a:hover {
+  background-color: var(--thm-base);
+  color: #ffffff;
+}
+
+.servicesDetailsButtonBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btnOne {
+  position: relative;
+  display: block;
+  background-color: var(--thm-base);
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.5s linear;
+  z-index: 1;
+}
+
+.btnOne a {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 17px 30px 17px;
+  transition: all 500ms ease;
+  text-decoration: none;
+  font-family: var(--thm-font-2);
+}
+
+.btnOne--two {
+  background-color: var(--thm-black);
+}
+
+.servicesDetailsContactBox {
+  background-color: #ffffff;
+}
+
+.servicesDetailsContactBox .title {
+  margin-bottom: 23px;
+}
+
+.servicesDetailsContactBox p {
+  margin-bottom: 31px;
+}
+
+.servicesDetailsContactBox .number {
+  position: relative;
+  display: block;
+}
+
+.servicesDetailsContactBox .number a {
+  position: relative;
+  display: inline-block;
+  color: var(--thm-base);
+  font-size: 24px;
+  font-weight: 800;
+  font-family: var(--thm-font-2);
+  text-decoration: none;
+}
+
+.servicesDetailsContactBox .number a span {
+  position: relative;
+  display: inline-block;
+  padding-right: 10px;
+  color: var(--thm-base);
+  font-size: 24px;
+}
+
+@media (max-width: 991px) {
+  .servicesDetailsContent {
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+
+  .servicesDetailsTextBox2 {
+    padding: 30px;
+  }
+
+  .servicesDetailsTextBox2Content {
+    margin-left: 0;
+    margin-top: 30px;
+  }
+
+  .qualityMaterialsTabBoxContent,
+  .interiorDesignTabBoxContent,
+  .personalCareTabBoxContent {
+    margin-left: 0;
+    margin-top: 30px;
+  }
+
+  .servicesDetailsTabButton ul {
+    flex-wrap: wrap;
+  }
+
+  .servicesDetailsTabButton ul li {
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .servicesDetailsPage {
+    padding: 70px 0 40px;
+  }
+
+  .servicesDetailsTextBox1 .title h2,
+  .servicesDetailsTextBox2Content .title h2 {
+    font-size: 26px;
+    line-height: 36px;
+  }
+}
+

@@ -1,0 +1,85 @@
+.pageHeader {
+  position: relative;
+  display: block;
+  padding: 209px 0px 211px;
+  overflow: hidden;
+  z-index: 1;
+  font-family: var(--thm-font);
+  color: var(--thm-gray);
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.pageHeaderBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+
+  background-blend-mode: multiply;
+  z-index: -1;
+}
+
+.pageHeaderWrapper {
+  position: relative;
+  z-index: 2;
+}
+
+.pageHeaderContent {
+  text-align: center;
+}
+
+.pageHeaderContent h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 15px;
+  line-height: 1.2;
+  font-family: var(--thm-font-2);
+}
+
+.pageHeaderMenu ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pageHeaderMenu ul li {
+  color: #ffffff;
+  font-size: 16px;
+  position: relative;
+}
+
+.pageHeaderMenu ul li a {
+  color: #ffffff;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.pageHeaderMenu ul li a:hover {
+  color: var(--thm-base);
+}
+
+.pageHeaderMenu ul li:not(:last-child)::after {
+  content: "/";
+  margin: 0 10px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 767px) {
+  .pageHeader {
+    padding: 100px 0;
+  }
+
+  .pageHeaderContent h2 {
+    font-size: 36px;
+  }
+}
+
