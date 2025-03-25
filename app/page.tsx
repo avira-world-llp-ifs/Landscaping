@@ -134,7 +134,7 @@ export default function Home() {
               </div>
               <div className={`${styles.about_us_right_image_container} col-12 col-md-5`} data-aos="fade">
                 <div className={styles.about_image}>
-                  <img src={Pic.src} width="426" height="573" alt="House" />
+                  <img src={Pic.src} width="426" height="573" alt="House" style={{borderRadius:"0 70px 0 70px "}}/>
                 </div>
                 <div className={styles.about_section_cite_wrapper}>
                   <blockquote className={styles.about_section_blockquote}>
@@ -176,10 +176,10 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            <div className="col-12 col-md-6 col-lg-5">
-              <div className={styles1.services_section_image} data-aos="fade">
-                <img src="/services_section_image.jpg" width="426" height="573" alt="House" />
-                <a className={styles1.services_section_play} href="#video">
+            <div className="col-12 col-md-6 col-lg-5" >
+              <div className={styles1.services_section_image} data-aos="fade" >
+                <img src="/services_section_image.jpg" width="426" height="573" alt="House" style={{borderRadius:'0 70px 0 70px'}} />
+                <a className={styles1.services_section_play} href="#video" >
                   <svg className="play-btn__icon" width="18" height="18">
                     {/* <video src='' /> */}
                   </svg>
@@ -194,36 +194,6 @@ export default function Home() {
 
 
       {/* statistics sections start */}
-      {/* <div className={styles2.statistics_outer_container} data-aos="fade">
-        <div className={styles2.statistics_container}>
-          <div className={`${styles2.statistics} row`}>
-            <div className={`${styles2.statistics_item} col-12 col-sm`}>
-              <div className={styles2.statistics_item_value}>
-                <span className="__js_number" data-end-value="20">20</span>
-              </div>
-              <div className={styles2.statistics_item_text}>Years
-                <br />working
-              </div>
-            </div>
-            <div className={`${styles2.statistics_item} col-12 col-sm`}>
-              <div className={styles2.statistics_item_value}>
-                <span className={styles2.statistics_item_number} data-end-value="7">7</span>
-              </div>
-              <div className={styles2.statistics_item_text}>Talanted
-                <br />managers
-              </div>
-            </div>
-            <div className={`${styles2.statistics_item} col-12 col-sm`}>
-              <div className={styles2.statistics_item_value}>
-                <span className="__js_number" data-end-value="100">100</span>
-              </div>
-              <div className={styles2.statistics_item_text}>Complitly
-                <br />projects
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
       <div className={styles2.statistics_outer_container} data-aos="fade">
       <div className={styles2.statistics_container}>
         <div className={`${styles2.statistics} row`}>
@@ -283,17 +253,6 @@ export default function Home() {
       <section className="webpage__latest-projects latest-projects">
         <header className={styles5.projects_header} data-aos="fade">
           <h2 className={styles5.projects_header_heading}>Latest projects</h2>
-
-          {/* <div className={styles5.project_filters}>
-            <button className={`${styles5.filter_item}`} type="button" data-filter="*">all</button>
-            <button className={styles5.filter_item} type="button" data-filter=".__js_building">Building</button>
-            <button className={styles5.filter_item} type="button" data-filter=".__js_interior">Interior</button>
-          </div>
-          <a className={styles5.projects_more} href="projects-grid.html">View all projects
-            <svg width="20" height="20">
-              <ChevronRight></ChevronRight>
-            </svg>
-          </a> */}
           <div className={styles5.project_filters}>
             <button
               className={`${styles5.filter_item} ${filter === 'all' ? styles5.active_filter : ''}`}

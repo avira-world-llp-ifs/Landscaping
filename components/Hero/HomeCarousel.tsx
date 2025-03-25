@@ -95,8 +95,9 @@ export default function MultiLineSlideHero() {
 
               {/* Blue Panel (Fades in after 2s) */}
               <div
-                className="absolute top-0 h-full bg-blue-600 text-white p-8 flex flex-col justify-center transition-all duration-1000"
+                className="absolute top-0 h-full text-white p-8 flex flex-col justify-center transition-all duration-1000"
                 style={{
+                  backgroundColor:'var(--bs-blue)',
                   width: "30%",
                   transform: animateState.showBlueBox
                     ? "translateX(0)"

@@ -12,7 +12,6 @@
   -webkit-locale: auto; /* Automatically detects the locale in WebKit browsers */
   white-space: normal; /* Allows text to wrap normally */
   box-sizing: inherit; /* Inherits box-sizing from the parent element */
-  margin-bottom: 160px; /* Adds space below the container, possibly to prevent overlap with other content */
 
   /* Transition properties for smooth animation */
   transition-property: opacity, transform; /* Specifies which properties will be animated */
