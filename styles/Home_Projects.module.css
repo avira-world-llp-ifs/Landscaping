@@ -68,7 +68,7 @@
   box-sizing: inherit;
   flex-shrink: 0;
   margin-bottom: 0;
-  margin-left: 20px;
+  /* margin-left: 20px; */
 }
 
 .projects_more {
