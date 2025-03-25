@@ -203,9 +203,16 @@ type SubNavItem = {
   href: string
 }
 
-// Update the subNavMapping to use dynamic routes
+// Update the subNavMapping to include all possible sections
 const subNavMapping: Record<string, SubNavItem[]> = {
   // Services categories
+  "/services": [
+    { name: "Consulting", href: "/services/consulting" },
+    { name: "Project Management", href: "/services/project-management" },
+    { name: "Engineering", href: "/services/engineering" },
+    { name: "Architecture", href: "/services/architecture" },
+    { name: "Interior Design", href: "/services/interior-design" },
+  ],
   "/services/consulting": [
     { name: "Business Strategy", href: "/services/consulting/business-strategy" },
     { name: "Market Analysis", href: "/services/consulting/market-analysis" },
@@ -245,6 +252,14 @@ const subNavMapping: Record<string, SubNavItem[]> = {
   ],
 
   // Tech categories
+  "/tech": [
+    { name: "Design & Drafting", href: "/tech/design-drafting" },
+    { name: "Landscape Design", href: "/tech/landscape-design" },
+    { name: "Project Management", href: "/tech/project-management" },
+    { name: "Rendering & Visualization", href: "/tech/rendering-visualization" },
+    { name: "Surveying & GIS", href: "/tech/surveying-gis" },
+    { name: "Visualization & AR", href: "/tech/visualization-ar" },
+  ],
   "/tech/design-drafting": [
     { name: "AutoCAD", href: "/tech/design-drafting/autocad" },
     { name: "SketchUp", href: "/tech/design-drafting/sketchup" },
@@ -271,8 +286,27 @@ const subNavMapping: Record<string, SubNavItem[]> = {
     { name: "Photoshop", href: "/tech/rendering-visualization/photoshop" },
     { name: "Coreldraw", href: "/tech/rendering-visualization/coreldraw" },
   ],
+  "/tech/surveying-gis": [
+    { name: "ArcGIS", href: "/tech/surveying-gis/arcgis" },
+    { name: "QGIS", href: "/tech/surveying-gis/qgis" },
+    { name: "Trimble", href: "/tech/surveying-gis/trimble" },
+    { name: "Leica", href: "/tech/surveying-gis/leica" },
+  ],
+  "/tech/visualization-ar": [
+    { name: "Unity", href: "/tech/visualization-ar/unity" },
+    { name: "Unreal Engine", href: "/tech/visualization-ar/unreal-engine" },
+    { name: "ARKit", href: "/tech/visualization-ar/arkit" },
+    { name: "ARCore", href: "/tech/visualization-ar/arcore" },
+  ],
 
   // Industry categories
+  "/industries": [
+    { name: "Residential & Luxury Homes", href: "/industries/residential-luxury-homes" },
+    { name: "Corporate & Office Spaces", href: "/industries/corporate-office-spaces" },
+    { name: "Retail & Commercial", href: "/industries/retail-commercial" },
+    { name: "Hospitality & Tourism", href: "/industries/hospitality-tourism" },
+    { name: "Healthcare & Wellness", href: "/industries/healthcare-wellness" },
+  ],
   "/industries/residential-luxury-homes": [
     { name: "Luxury Villas", href: "/industries/residential-luxury-homes/luxury-villas" },
     { name: "Penthouses", href: "/industries/residential-luxury-homes/penthouses" },
@@ -304,28 +338,146 @@ const subNavMapping: Record<string, SubNavItem[]> = {
     { name: "Fitness Facilities", href: "/industries/healthcare-wellness/fitness" },
   ],
 
-  // General category pages
-  "/tech": [
-    { name: "Design & Drafting", href: "/tech/design-drafting" },
-    { name: "Landscape Design", href: "/tech/landscape-design" },
-    { name: "Project Management", href: "/tech/project-management" },
-    { name: "Rendering & Visualization", href: "/tech/rendering-visualization" },
-    { name: "Surveying & GIS", href: "/tech/surveying-gis" },
-    { name: "Visualization & AR", href: "/tech/visualization-ar" },
+  // Design Trends
+  "/design-trends": [
+    { name: "Industry Insights", href: "/design-trends/industry-insights" },
+    { name: "Innovations", href: "/design-trends/innovations" },
+    { name: "Inspirations", href: "/design-trends/inspirations" },
   ],
-  "/industries": [
-    { name: "Residential & Luxury Homes", href: "/industries/residential-luxury-homes" },
-    { name: "Corporate & Office Spaces", href: "/industries/corporate-office-spaces" },
-    { name: "Retail & Commercial", href: "/industries/retail-commercial" },
-    { name: "Hospitality & Tourism", href: "/industries/hospitality-tourism" },
-    { name: "Healthcare & Wellness", href: "/industries/healthcare-wellness" },
+  "/design-trends/industry-insights": [
+    { name: "Biophilic Design", href: "/design-trends/industry-insights/biophilic-design" },
+    { name: "Sustainable Architecture", href: "/design-trends/industry-insights/sustainable-architecture" },
+    { name: "Digital Transformation", href: "/design-trends/industry-insights/digital-transformation" },
+    { name: "Adaptive Reuse", href: "/design-trends/industry-insights/adaptive-reuse" },
+    { name: "Inclusive Design", href: "/design-trends/industry-insights/inclusive-design" },
+    { name: "Remote Work Impact", href: "/design-trends/industry-insights/remote-work-office-design" },
   ],
-  "/services": [
-    { name: "Consulting", href: "/services/consulting" },
-    { name: "Project Management", href: "/services/project-management" },
-    { name: "Engineering", href: "/services/engineering" },
-    { name: "Architecture", href: "/services/architecture" },
-    { name: "Interior Design", href: "/services/interior-design" },
+  "/design-trends/innovations": [
+    { name: "Smart Materials", href: "/design-trends/innovations/smart-materials" },
+    { name: "3D Printing", href: "/design-trends/innovations/3d-printing-construction" },
+    { name: "AI Design Tools", href: "/design-trends/innovations/ai-design-tools" },
+    { name: "Biomimicry", href: "/design-trends/innovations/biomimicry" },
+    { name: "VR Design Review", href: "/design-trends/innovations/vr-design-review" },
+    { name: "Self-Healing Materials", href: "/design-trends/innovations/self-healing-materials" },
+  ],
+  "/design-trends/inspirations": [
+    { name: "Minimalism Reimagined", href: "/design-trends/inspirations/minimalism-reimagined" },
+    { name: "Cross-Cultural Design", href: "/design-trends/inspirations/cross-cultural" },
+    { name: "Color Psychology", href: "/design-trends/inspirations/color-psychology" },
+    { name: "Adaptive Reuse", href: "/design-trends/inspirations/adaptive-reuse" },
+    { name: "Biophilic Design", href: "/design-trends/inspirations/biophilic-design" },
+    { name: "Artisanal Craftsmanship", href: "/design-trends/inspirations/artisanal-craftsmanship" },
+  ],
+
+  // Network
+  "/network": [
+    { name: "Find a Designer", href: "/network/find-designer" },
+    { name: "Project Collaborations", href: "/network/project-collaborations" },
+    { name: "Talent Directory", href: "/network/talent-directory" },
+    { name: "Marketplace", href: "/network/marketplace" },
+    { name: "Community Hub", href: "/network/community-hub" },
+  ],
+  "/network/find-designer": [
+    { name: "Interior Designers", href: "/network/find-designer/interior" },
+    { name: "Architects", href: "/network/find-designer/architects" },
+    { name: "Landscape Designers", href: "/network/find-designer/landscape" },
+    { name: "Industrial Designers", href: "/network/find-designer/industrial" },
+    { name: "Visualizers", href: "/network/find-designer/visualizers" },
+  ],
+  "/network/project-collaborations": [
+    { name: "Residential Projects", href: "/network/project-collaborations/residential" },
+    { name: "Commercial Projects", href: "/network/project-collaborations/commercial" },
+    { name: "Sustainable Projects", href: "/network/project-collaborations/sustainable" },
+    { name: "Cultural Projects", href: "/network/project-collaborations/cultural" },
+    { name: "Hospitality Projects", href: "/network/project-collaborations/hospitality" },
+  ],
+  "/network/talent-directory": [
+    { name: "All Professionals", href: "/network/talent-directory/all" },
+    { name: "Architects", href: "/network/talent-directory/architects" },
+    { name: "Interior Designers", href: "/network/talent-directory/interior-designers" },
+    { name: "Landscape Architects", href: "/network/talent-directory/landscape-architects" },
+    { name: "Consultants", href: "/network/talent-directory/consultants" },
+    { name: "Visualizers", href: "/network/talent-directory/visualizers" },
+  ],
+  "/network/marketplace": [
+    { name: "All Services", href: "/network/marketplace/all" },
+    { name: "Interior Design", href: "/network/marketplace/interior-design" },
+    { name: "Architecture", href: "/network/marketplace/architecture" },
+    { name: "Visualization", href: "/network/marketplace/visualization" },
+    { name: "Landscape", href: "/network/marketplace/landscape" },
+    { name: "Consultation", href: "/network/marketplace/consultation" },
+  ],
+  "/network/community-hub": [
+    { name: "Discussions", href: "/network/community-hub/discussions" },
+    { name: "Events", href: "/network/community-hub/events" },
+    { name: "Groups", href: "/network/community-hub/groups" },
+    { name: "Resources", href: "/network/community-hub/resources" },
+    { name: "Mentorship", href: "/network/community-hub/mentorship" },
+  ],
+
+  // Portfolio
+  "/portfolio": [
+    { name: "All Projects", href: "/portfolio/all" },
+    { name: "Residential", href: "/portfolio/residential" },
+    { name: "Commercial", href: "/portfolio/commercial" },
+    { name: "Hospitality", href: "/portfolio/hospitality" },
+    { name: "Institutional", href: "/portfolio/institutional" },
+    { name: "Urban Design", href: "/portfolio/urban-design" },
+    { name: "Interior Design", href: "/portfolio/interior-design" },
+  ],
+  "/portfolio/residential": [
+    { name: "Luxury Homes", href: "/portfolio/residential/luxury-homes" },
+    { name: "Apartments", href: "/portfolio/residential/apartments" },
+    { name: "Villas", href: "/portfolio/residential/villas" },
+    { name: "Sustainable Homes", href: "/portfolio/residential/sustainable-homes" },
+  ],
+  "/portfolio/commercial": [
+    { name: "Office Buildings", href: "/portfolio/commercial/office-buildings" },
+    { name: "Retail Spaces", href: "/portfolio/commercial/retail-spaces" },
+    { name: "Corporate Headquarters", href: "/portfolio/commercial/corporate-headquarters" },
+    { name: "Mixed-Use Developments", href: "/portfolio/commercial/mixed-use" },
+  ],
+  "/portfolio/hospitality": [
+    { name: "Hotels", href: "/portfolio/hospitality/hotels" },
+    { name: "Resorts", href: "/portfolio/hospitality/resorts" },
+    { name: "Restaurants", href: "/portfolio/hospitality/restaurants" },
+    { name: "Boutique Hotels", href: "/portfolio/hospitality/boutique-hotels" },
+  ],
+  "/portfolio/institutional": [
+    { name: "Educational", href: "/portfolio/institutional/educational" },
+    { name: "Healthcare", href: "/portfolio/institutional/healthcare" },
+    { name: "Cultural", href: "/portfolio/institutional/cultural" },
+    { name: "Government", href: "/portfolio/institutional/government" },
+  ],
+  "/portfolio/urban-design": [
+    { name: "Master Planning", href: "/portfolio/urban-design/master-planning" },
+    { name: "Public Spaces", href: "/portfolio/urban-design/public-spaces" },
+    { name: "Urban Renewal", href: "/portfolio/urban-design/urban-renewal" },
+    { name: "Transit-Oriented Development", href: "/portfolio/urban-design/transit-oriented" },
+  ],
+  "/portfolio/interior-design": [
+    { name: "Residential Interiors", href: "/portfolio/interior-design/residential" },
+    { name: "Commercial Interiors", href: "/portfolio/interior-design/commercial" },
+    { name: "Hospitality Interiors", href: "/portfolio/interior-design/hospitality" },
+    { name: "Retail Interiors", href: "/portfolio/interior-design/retail" },
+  ],
+
+  // About
+  "/about": [
+    { name: "Our Story", href: "/about/our-story" },
+    { name: "Our Team", href: "/about/our-team" },
+    { name: "Our Process", href: "/about/our-process" },
+    { name: "Careers", href: "/about/careers" },
+    { name: "Awards & Recognition", href: "/about/awards" },
+  ],
+
+  // Contact
+  "/contact": [
+    { name: "General Inquiries", href: "/contact/general" },
+    { name: "Project Inquiries", href: "/contact/project" },
+    { name: "Career Inquiries", href: "/contact/careers" },
+    { name: "Media Inquiries", href: "/contact/media" },
+    { name: "Office Locations", href: "/contact/locations" },
   ],
 }
 
