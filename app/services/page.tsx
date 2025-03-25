@@ -4,6 +4,9 @@ import { ArrowRight } from "lucide-react"
 import { serviceCategories } from "@/data/services-data"
 
 export default function ServicesPage() {
+  // Ensure serviceCategories is defined and is an array
+  const categories = serviceCategories || []
+
   return (
     <div className="py-16">
       <div className="container mx-auto px-4">
@@ -16,7 +19,7 @@ export default function ServicesPage() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {serviceCategories.map((service) => (
+          {categories.map((service) => (
             <div
               key={service.slug}
               className="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-2"

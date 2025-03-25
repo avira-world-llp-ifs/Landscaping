@@ -29,7 +29,7 @@ export interface IndustryCategory {
 }
 
 // Sample data for industry categories
-const industryCategories: IndustryCategory[] = [
+export const industryCategories: IndustryCategory[] = [
   {
     slug: "residential-luxury-homes",
     title: "Residential & Luxury Homes",
