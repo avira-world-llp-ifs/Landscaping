@@ -415,53 +415,6 @@ const subNavMapping: Record<string, SubNavItem[]> = {
     { name: "Mentorship", href: "/network/community-hub/mentorship" },
   ],
 
-  // Portfolio
-  "/portfolio": [
-    { name: "All Projects", href: "/portfolio/all" },
-    { name: "Residential", href: "/portfolio/residential" },
-    { name: "Commercial", href: "/portfolio/commercial" },
-    { name: "Hospitality", href: "/portfolio/hospitality" },
-    { name: "Institutional", href: "/portfolio/institutional" },
-    { name: "Urban Design", href: "/portfolio/urban-design" },
-    { name: "Interior Design", href: "/portfolio/interior-design" },
-  ],
-  "/portfolio/residential": [
-    { name: "Luxury Homes", href: "/portfolio/residential/luxury-homes" },
-    { name: "Apartments", href: "/portfolio/residential/apartments" },
-    { name: "Villas", href: "/portfolio/residential/villas" },
-    { name: "Sustainable Homes", href: "/portfolio/residential/sustainable-homes" },
-  ],
-  "/portfolio/commercial": [
-    { name: "Office Buildings", href: "/portfolio/commercial/office-buildings" },
-    { name: "Retail Spaces", href: "/portfolio/commercial/retail-spaces" },
-    { name: "Corporate Headquarters", href: "/portfolio/commercial/corporate-headquarters" },
-    { name: "Mixed-Use Developments", href: "/portfolio/commercial/mixed-use" },
-  ],
-  "/portfolio/hospitality": [
-    { name: "Hotels", href: "/portfolio/hospitality/hotels" },
-    { name: "Resorts", href: "/portfolio/hospitality/resorts" },
-    { name: "Restaurants", href: "/portfolio/hospitality/restaurants" },
-    { name: "Boutique Hotels", href: "/portfolio/hospitality/boutique-hotels" },
-  ],
-  "/portfolio/institutional": [
-    { name: "Educational", href: "/portfolio/institutional/educational" },
-    { name: "Healthcare", href: "/portfolio/institutional/healthcare" },
-    { name: "Cultural", href: "/portfolio/institutional/cultural" },
-    { name: "Government", href: "/portfolio/institutional/government" },
-  ],
-  "/portfolio/urban-design": [
-    { name: "Master Planning", href: "/portfolio/urban-design/master-planning" },
-    { name: "Public Spaces", href: "/portfolio/urban-design/public-spaces" },
-    { name: "Urban Renewal", href: "/portfolio/urban-design/urban-renewal" },
-    { name: "Transit-Oriented Development", href: "/portfolio/urban-design/transit-oriented" },
-  ],
-  "/portfolio/interior-design": [
-    { name: "Residential Interiors", href: "/portfolio/interior-design/residential" },
-    { name: "Commercial Interiors", href: "/portfolio/interior-design/commercial" },
-    { name: "Hospitality Interiors", href: "/portfolio/interior-design/hospitality" },
-    { name: "Retail Interiors", href: "/portfolio/interior-design/retail" },
-  ],
-
   // About
   "/about": [
     { name: "Our Story", href: "/about/our-story" },

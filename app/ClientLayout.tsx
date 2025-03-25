@@ -62,7 +62,7 @@ export default function ClientLayout({ children }: ClientLayoutProps) {
       </div>
 
       {/* Main Content - Adjusted padding to account for fixed elements */}
-      <div className={scrolled && subNavVisible ? "pt-14" : ""}>{children}</div>
+      <div >{children}</div>
     </>
   )
 }
