@@ -222,7 +222,7 @@ export default function IndustryDesign({ data, type, parentTitle }: Props) {
 
               <div className="mt-8">
                 <Image
-                  src="/placeholder.svg?height=400&width=300"
+                  src="/luxury1.jpg"
                   alt="Healthcare Brochure"
                   width={300}
                   height={400}
@@ -243,7 +243,7 @@ export default function IndustryDesign({ data, type, parentTitle }: Props) {
                   }`}
                 >
                   <Image
-                    src="/placeholder.svg?height=500&width=800"
+                    src="/luxury.jpg"
                     alt={data.title}
                     width={800}
                     height={500}

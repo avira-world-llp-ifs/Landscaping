@@ -36,7 +36,7 @@ export const industryCategories: IndustryCategory[] = [
     description: "Exceptional design for distinctive residential properties.",
     overview:
       "We create beautiful, functional homes that reflect the lifestyle and aspirations of our clients, from luxury villas to smart homes and eco-friendly residences.",
-    image: "/placeholder.svg?height=600&width=1200",
+    image: "/luxury.jpg",
   },
   {
     slug: "corporate-office-spaces",
@@ -79,7 +79,7 @@ const industryItems: Record<string, IndustryItem[]> = {
       slug: "luxury-villas",
       title: "Luxury Villas",
       description: "Exclusive villa designs that blend luxury with functionality.",
-      image: "/placeholder.svg?height=500&width=1200",
+      image: "/luxury1.jpg",
       sections: [
         {
           title: "Bespoke Villa Design",
@@ -96,7 +96,7 @@ const industryItems: Record<string, IndustryItem[]> = {
           title: "Our Approach to Luxury",
           content:
             "We believe that true luxury lies in the details, from thoughtful space planning to exquisite finishes and custom elements.",
-          image: "/placeholder.svg?height=400&width=700",
+          image: "/luxury1.jpg",
         },
       ],
       caseStudies: [

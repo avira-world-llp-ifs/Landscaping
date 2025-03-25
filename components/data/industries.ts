@@ -28,22 +28,22 @@ export const industriesData = {
         {
           title: "Electronic Health Records",
           description: "Modern, user-friendly EHR systems that streamline clinical workflows.",
-          image: "/placeholder.svg?height=150&width=300",
+          image: "/ElectronicHealthRecords.jpg",
         },
         {
           title: "Telemedicine Platforms",
           description: "Secure video consultation solutions for remote patient care.",
-          image: "/placeholder.svg?height=150&width=300",
+          image: "/TelemedicinePlatforms.jpg",
         },
         {
           title: "Healthcare Analytics",
           description: "Data-driven insights to improve clinical outcomes and operational efficiency.",
-          image: "/placeholder.svg?height=150&width=300",
+          image: "/HealthcareAnalytics.jpg",
         },
         {
           title: "Patient Engagement Apps",
           description: "Mobile applications that enhance the patient experience and improve adherence.",
-          image: "/placeholder.svg?height=150&width=300",
+          image: "/PatientEngagementApps.png",
         },
       ],
     },
