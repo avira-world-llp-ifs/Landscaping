@@ -1,9 +1,12 @@
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight } from "lucide-react"
-import { techCategories } from "@/data/tech-data"
+import { techCategories, type TechCategory } from "@/data/tech-data"
 
 export default function TechPage() {
+  // Ensure techCategories is defined and is an array
+  const categories = techCategories || []
+
   return (
     <div className="py-16">
       <div className="container mx-auto px-4">
@@ -16,7 +19,7 @@ export default function TechPage() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {techCategories.map((tech) => (
+          {categories.map((tech: TechCategory) => (
             <div
               key={tech.slug}
               className="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-2"

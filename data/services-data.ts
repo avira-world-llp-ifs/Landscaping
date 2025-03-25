@@ -30,7 +30,7 @@ export interface ServiceCategory {
 }
 
 // Sample data for service categories
-const serviceCategories: ServiceCategory[] = [
+export const serviceCategories: ServiceCategory[] = [
   {
     slug: "consulting",
     title: "Consulting Services",
@@ -61,7 +61,6 @@ const serviceCategories: ServiceCategory[] = [
     description: "Transform your spaces with our expert interior design services.",
     approach:
       "We create interiors that balance aesthetics, functionality, and your unique style to deliver spaces that inspire and delight.",
-    image: "/placeholder  and your unique style to deliver spaces that inspire and delight.",
     image: "/placeholder.svg?height=600&width=1200",
   },
   {

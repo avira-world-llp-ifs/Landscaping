@@ -12,7 +12,7 @@ export default function ServiceDetailHeader({ title }: ServiceDetailHeaderProps)
       <div
         className={styles.pageHeaderBg}
         style={{
-          backgroundImage: `url(${images.serviceHeader})`,
+          backgroundImage: `url(${images?.serviceHeader || "/placeholder.svg?height=600&width=1200"})`,
         }}
       ></div>
       <div className="container mx-auto px-4">

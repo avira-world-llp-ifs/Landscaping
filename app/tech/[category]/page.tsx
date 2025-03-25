@@ -2,7 +2,7 @@ import { notFound } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight } from "lucide-react"
-import { getTechCategory, getTechItemsByCategory } from "@/data/tech-data"
+import { getTechCategory, getTechItemsByCategory, type TechItem } from "@/data/tech-data"
 import ServiceDetailHeader from "@/components/ServiceDetail/ServiceDetailHeader"
 
 export default function TechCategoryPage({ params }: { params: { category: string } }) {
@@ -15,7 +15,7 @@ export default function TechCategoryPage({ params }: { params: { category: strin
   }
 
   // Get the tech items for this category
-  const techItems = getTechItemsByCategory(params.category)
+  const techItems = getTechItemsByCategory(params.category) || []
 
   return (
     <div>
@@ -38,7 +38,7 @@ export default function TechCategoryPage({ params }: { params: { category: strin
           <h3 className="text-2xl font-bold mb-8 text-center">Our {categoryData.title} Tools</h3>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {techItems.map((item, index) => (
+            {techItems.map((item: TechItem, index: number) => (
               <div
                 key={index}
                 className="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-2"

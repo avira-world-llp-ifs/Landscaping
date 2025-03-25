@@ -1,4 +1,3 @@
-// Types for tech
 export interface TechItem {
   slug: string
   title: string
@@ -29,7 +28,7 @@ export interface TechCategory {
 }
 
 // Sample data for tech categories
-const techCategories: TechCategory[] = [
+export const techCategories: TechCategory[] = [
   {
     slug: "design-drafting",
     title: "Design & Drafting Software",
@@ -60,6 +59,22 @@ const techCategories: TechCategory[] = [
     description: "Advanced tools to bring your designs to life with photorealistic rendering.",
     overview:
       "Visualization tools allow designers to communicate ideas effectively, validate design decisions, and provide clients with realistic previews of finished spaces.",
+    image: "/placeholder.svg?height=600&width=1200",
+  },
+  {
+    slug: "surveying-gis",
+    title: "Surveying & GIS Tools",
+    description: "Precision mapping and geographical information systems.",
+    overview:
+      "Surveying and GIS tools provide accurate spatial data for site analysis, planning, and construction, ensuring projects are precisely aligned with their environment.",
+    image: "/placeholder.svg?height=600&width=1200",
+  },
+  {
+    slug: "visualization-ar",
+    title: "Visualization & AR Tools",
+    description: "Immersive experiences with augmented reality technology.",
+    overview:
+      "Visualization and AR tools allow clients to experience designs in a realistic, interactive way, improving communication and decision-making.",
     image: "/placeholder.svg?height=600&width=1200",
   },
 ]

@@ -2,7 +2,7 @@ import { notFound } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight } from "lucide-react"
-import { getIndustryCategory, getIndustryItemsByCategory } from "@/data/industries-data"
+import { getIndustryCategory, getIndustryItemsByCategory, type IndustryItem } from "@/data/industries-data"
 import ServiceDetailHeader from "@/components/ServiceDetail/ServiceDetailHeader"
 
 export default function IndustryCategoryPage({ params }: { params: { category: string } }) {
@@ -15,7 +15,7 @@ export default function IndustryCategoryPage({ params }: { params: { category: s
   }
 
   // Get the industry items for this category
-  const industryItems = getIndustryItemsByCategory(params.category)
+  const industryItems = getIndustryItemsByCategory(params.category) || []
 
   return (
     <div>
@@ -45,7 +45,7 @@ export default function IndustryCategoryPage({ params }: { params: { category: s
           <h3 className="text-2xl font-bold mb-8 text-center">Our Solutions for {categoryData.title}</h3>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {industryItems.map((item, index) => (
+            {industryItems.map((item: IndustryItem, index: number) => (
               <div
                 key={index}
                 className="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-2"
