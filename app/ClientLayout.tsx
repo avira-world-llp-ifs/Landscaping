@@ -45,7 +45,7 @@ export default function ClientLayout({ children }: ClientLayoutProps) {
       </div>
 
       {/* Hero Section - Scrolls away */}
-      <div id="global-hero" className="pt-16">
+      <div id="global-hero">
         <MultiLineSlideHero/>
       </div>
 
