@@ -1,14 +1,20 @@
+"use client"
+
 import { notFound } from "next/navigation"
 import IndustryDesign from "./industrydesign"
-import { getIndustryData } from "@/data/industries-data"
 import { industriesData } from "@/components/data/industries"
+import { getIndustryData } from "@/data/industries-data"
 
-export default function IndustryItemPage({ params }: { params: { category: string; item: string } }) {
+export default function IndustryPageClient({ params }: { params: { category: string; item: string } }) {
+  if (!params?.category || !params?.item) {
+    console.log("Missing parameters")
+    notFound()
+  }
+
   // Try to get data from both sources to ensure we find something
   const industryData =
     getIndustryData(params.category, params.item) || industriesData[params.category]?.subitems?.[params.item]
 
-  // If the industry doesn't exist, show the 404 page
   if (!industryData) {
     console.log(`Industry not found: category=${params.category}, item=${params.item}`)
     notFound()
