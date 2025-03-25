@@ -152,7 +152,7 @@ export default function MegaMenuNavbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`sticky top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled ? "bg-[#003087] shadow-lg" : "bg-transparent"
       }`}
     >
@@ -247,9 +247,9 @@ export default function MegaMenuNavbar() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white shadow-lg">
+        <div className="lg:hidden bg-white shadow-lg mobile-menu-container">
           <div className="container mx-auto px-4 py-4">
-            <ul className="space-y-4">
+            <ul className="space-y-4 max-h-[70vh] overflow-y-auto">
               {NAV_ITEMS.map((item) => (
                 <li key={item.title} className="py-2">
                   <div className="flex flex-col">

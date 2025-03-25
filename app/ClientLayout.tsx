@@ -40,22 +40,20 @@ export default function ClientLayout({ children }: ClientLayoutProps) {
   return (
     <>
       {/* Main Navbar - Always fixed at top */}
-      <div className="fixed top-0 left-0 right-0 z-50">
+      <div className="sticky top-0 left-0 right-0 z-50">
         <MegaMenuNavbar />
       </div>
 
       {/* Hero Section - Scrolls away */}
       <div id="global-hero" className="pt-16">
-        {/* <GlobalHero />
-         */}
-         <MultiLineSlideHero/>
+        <MultiLineSlideHero/>
       </div>
 
       {/* SubNavbar - Becomes fixed after scrolling past hero */}
       <div
         id="sub-navbar"
         className={`${
-          scrolled && subNavVisible ? "fixed top-16 left-0 right-0" : "relative"
+          scrolled && subNavVisible ? "sticky top-16 left-0 right-0" : "relative"
         } z-40 transition-all duration-300`}
       >
         <SubNavbar />
