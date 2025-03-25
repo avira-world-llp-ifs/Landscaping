@@ -173,7 +173,7 @@ const CraftloreFooter = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 border-t border-white/20 pt-6 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+        <div className="mt-3 border-t border-white/20 pt-6 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
           {/* Left - Copyright */}
           <p className="text-sm">© 2025 AA Design Studio. All rights reserved.</p>
 
