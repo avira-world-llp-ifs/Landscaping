@@ -1,0 +1,141 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  transition: all 0.3s ease;
+}
+
+.transparent {
+  background-color: transparent;
+}
+
+.scrolled {
+  background-color: #003087;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  height: 48px;
+  width: auto;
+}
+
+.navMenu {
+  display: none;
+}
+
+.mobileMenuButton {
+  display: block;
+}
+
+.navItem button {
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.transparent .navItem button {
+  color: #333;
+}
+
+.scrolled .navItem button {
+  color: white;
+}
+
+.transparent .navItem button:hover {
+  color: #003087;
+}
+
+.scrolled .navItem button:hover {
+  color: #e0e0e0;
+}
+
+.contactButton {
+  font-size: 0.875rem;
+  padding: 0.375rem 1rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.transparent .contactButton {
+  border: 2px solid #003087;
+  color: #003087;
+}
+
+.scrolled .contactButton {
+  border: 2px solid white;
+  color: white;
+}
+
+.transparent .contactButton:hover {
+  background-color: #003087;
+  color: white;
+}
+
+.scrolled .contactButton:hover {
+  background-color: white;
+  color: #003087;
+}
+
+.megaMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border-top: 1px solid #e5e7eb;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  z-index: 40;
+  display: none;
+}
+
+.mobileMenu {
+  background-color: white;
+  padding: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.mobileMenuItem {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.mobileMenuSubItem {
+  padding: 0.5rem 0 0.5rem 1rem;
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.underline {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.transparent .underline {
+  background-color: #003087;
+}
+
+.scrolled .underline {
+  background-color: white;
+}
+
+@media (min-width: 1024px) {
+  .navMenu {
+    display: flex;
+  }
+
+  .mobileMenuButton {
+    display: none;
+  }
+
+  .megaMenu {
+    display: block;
+  }
+}
+
