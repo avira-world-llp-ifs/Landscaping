@@ -4,9 +4,19 @@ import { images } from "@/data/images"
 
 interface ServiceDetailHeaderProps {
   title: string
+  parentTitle?: string
+  parentPath?: string
+  category?: string
+  categoryPath?: string
 }
 
-export default function ServiceDetailHeader({ title }: ServiceDetailHeaderProps) {
+export default function ServiceDetailHeader({
+  title,
+  parentTitle,
+  parentPath,
+  category,
+  categoryPath,
+}: ServiceDetailHeaderProps) {
   return (
     <section className={styles.pageHeader}>
       <div
@@ -24,6 +34,16 @@ export default function ServiceDetailHeader({ title }: ServiceDetailHeaderProps)
                 <li>
                   <Link href="/">Home</Link>
                 </li>
+                {category && categoryPath && (
+                  <li>
+                    <Link href={categoryPath}>{category}</Link>
+                  </li>
+                )}
+                {parentTitle && parentPath && (
+                  <li>
+                    <Link href={parentPath}>{parentTitle}</Link>
+                  </li>
+                )}
                 <li>{title}</li>
               </ul>
             </div>

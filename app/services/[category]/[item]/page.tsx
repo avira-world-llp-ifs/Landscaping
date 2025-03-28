@@ -1,6 +1,6 @@
 import ServiceDetailHeader from "@/components/ServiceDetail/ServiceDetailHeader"
 import ServiceDetailBody from "@/components/ServiceDetail/ServiceDetailBody"
-import { getServiceData } from "@/data/services-data"
+import { getServiceData, getServiceCategory } from "@/data/services-data"
 import { notFound } from "next/navigation"
 
 export default function ServiceDetailPage({ params }: { params: { category: string; item: string } }) {
@@ -49,7 +49,13 @@ export default function ServiceDetailPage({ params }: { params: { category: stri
 
   return (
     <div>
-      <ServiceDetailHeader title={serviceData.title} />
+      <ServiceDetailHeader
+        title={serviceData.title}
+        category="Services"
+        categoryPath="/services"
+        parentTitle={getServiceCategory(params.category)?.title}
+        parentPath={`/services/${params.category}`}
+      />
       <ServiceDetailBody serviceData={enhancedServiceData} />
     </div>
   )

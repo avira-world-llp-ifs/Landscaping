@@ -1,6 +1,6 @@
 import ServiceDetailHeader from "@/components/ServiceDetail/ServiceDetailHeader"
 import ServiceDetailBody from "@/components/ServiceDetail/ServiceDetailBody"
-import { getTechData } from "@/data/tech-data"
+import { getTechData, getTechCategory } from "@/data/tech-data"
 import { notFound } from "next/navigation"
 
 export default function TechDetailPage({ params }: { params: { category: string; item: string } }) {
@@ -50,7 +50,13 @@ export default function TechDetailPage({ params }: { params: { category: string;
 
   return (
     <div>
-      <ServiceDetailHeader title={techData.title} />
+      <ServiceDetailHeader
+        title={techData.title}
+        category="Technology"
+        categoryPath="/tech"
+        parentTitle={getTechCategory(params.category)?.title}
+        parentPath={`/tech/${params.category}`}
+      />
       <ServiceDetailBody serviceData={serviceData} />
     </div>
   )

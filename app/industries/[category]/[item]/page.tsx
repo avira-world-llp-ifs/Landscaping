@@ -40,7 +40,16 @@ export default function IndustryItemPage({ params }: { params: { category: strin
     console.error("Error getting parent title:", error)
   }
 
-  return <IndustryDesign data={industryData} type="industry" parentTitle={parentTitle} />
+  return (
+    <IndustryDesign
+      data={industryData}
+      type="industry"
+      parentTitle={industriesData[params.category]?.title || params.category}
+      parentPath={`/industries/${params.category}`}
+      category="Industries"
+      categoryPath="/industries"
+    />
+  )
 }
 
 // Generate static params for all industry items

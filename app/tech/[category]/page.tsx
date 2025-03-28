@@ -19,7 +19,7 @@ export default function TechCategoryPage({ params }: { params: { category: strin
 
   return (
     <div>
-      <ServiceDetailHeader title={categoryData.title} />
+      <ServiceDetailHeader title={categoryData.title} category="Technology" categoryPath="/tech" />
 
       <div className="py-16">
         <div className="container mx-auto px-4">
