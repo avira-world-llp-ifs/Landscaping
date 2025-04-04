@@ -19,7 +19,7 @@ export default function IndustryCategoryPage({ params }: { params: { category: s
 
   return (
     <div>
-      <ServiceDetailHeader title={categoryData.title} />
+      <ServiceDetailHeader title={categoryData.title} category="Industries" categoryPath="/industries" />
 
       <div className="py-16">
         <div className="container mx-auto px-4">

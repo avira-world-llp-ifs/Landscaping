@@ -103,21 +103,7 @@ export default function ServiceDetailBody({ serviceData }: ServiceDetailBodyProp
               </div>
 
               {/* Text Box 3 - Additional Info */}
-              <div className={styles.servicesDetailsTextBox3}>
-                <p>{additionalInfo}</p>
-                <ul>
-                  {additionalFeatures.map((feature, index) => (
-                    <li key={index}>
-                      <div className={styles.icon}>
-                        <Check size={12} />
-                      </div>
-                      <div className={styles.text}>
-                        <p>{feature}</p>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              
 
               {/* Tab Box */}
               <div className={styles.servicesDetailsTabBox}>
@@ -362,6 +348,22 @@ export default function ServiceDetailBody({ serviceData }: ServiceDetailBodyProp
                     666-555-999-00
                   </Link>
                 </div>
+              </div>
+
+              <div className={styles.servicesDetailsTextBox3}>
+                <p>{additionalInfo}</p>
+                <ul>
+                  {additionalFeatures.map((feature, index) => (
+                    <li key={index}>
+                      <div className={styles.icon}>
+                        <Check size={12} />
+                      </div>
+                      <div className={styles.text}>
+                        <p>{feature}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>

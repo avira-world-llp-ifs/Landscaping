@@ -5,6 +5,7 @@ import MegaMenuNavbar from "@/components/Navbar/Navbar"
 import SubNavbar from "@/components/SubNavbar/SubNavbar"
 import GlobalHero from "@/components/Hero/GlobalHero"
 import MultiLineSlideHero from "@/components/Hero/HomeCarousel"
+import FloatingContactButton from "@/components/FloatingContactButton"
 
 interface ClientLayoutProps {
   children: ReactNode
@@ -63,6 +64,8 @@ export default function ClientLayout({ children }: ClientLayoutProps) {
 
       {/* Main Content - Adjusted padding to account for fixed elements */}
       <div >{children}</div>
+      {/* Floating Contact Button - Always visible */}
+      <FloatingContactButton />
     </>
   )
 }
